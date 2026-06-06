@@ -5,61 +5,61 @@ export interface Team {
 }
 
 export const teams: Team[] = [
-  // Tier 1 - Top 13 ranked teams
+  // Tier 1 - Top 13 ranked teams (Favoritos)
   { id: 'AR', name: 'Argentina', tier: 1 },
   { id: 'FR', name: 'Francia', tier: 1 },
   { id: 'ES', name: 'España', tier: 1 },
   { id: 'GB-ENG', name: 'Inglaterra', tier: 1 },
   { id: 'BR', name: 'Brasil', tier: 1 },
-  { id: 'BE', name: 'Bélgica', tier: 1 },
-  { id: 'NL', name: 'Países Bajos', tier: 1 },
   { id: 'PT', name: 'Portugal', tier: 1 },
-  { id: 'IT', name: 'Italia', tier: 1 },
   { id: 'DE', name: 'Alemania', tier: 1 },
+  { id: 'NL', name: 'Países Bajos', tier: 1 },
+  { id: 'BE', name: 'Bélgica', tier: 1 },
+  { id: 'HR', name: 'Croacia', tier: 1 },
   { id: 'CO', name: 'Colombia', tier: 1 },
   { id: 'UY', name: 'Uruguay', tier: 1 },
-  { id: 'HR', name: 'Croacia', tier: 1 },
+  { id: 'MA', name: 'Marruecos', tier: 1 },
 
-  // Tier 2 - Next 13 ranked teams
-  { id: 'MA', name: 'Marruecos', tier: 2 },
+  // Tier 2 - Next 13 ranked teams (Caballos Negros)
   { id: 'MX', name: 'México', tier: 2 },
   { id: 'US', name: 'Estados Unidos', tier: 2 },
   { id: 'CH', name: 'Suiza', tier: 2 },
-  { id: 'DK', name: 'Dinamarca', tier: 2 },
   { id: 'JP', name: 'Japón', tier: 2 },
   { id: 'SN', name: 'Senegal', tier: 2 },
-  { id: 'KR', name: 'Corea del Sur', tier: 2 },
-  { id: 'IR', name: 'Irán', tier: 2 },
-  { id: 'AU', name: 'Australia', tier: 2 },
-  { id: 'PL', name: 'Polonia', tier: 2 },
+  { id: 'NO', name: 'Noruega', tier: 2 },
   { id: 'EC', name: 'Ecuador', tier: 2 },
+  { id: 'AT', name: 'Austria', tier: 2 },
+  { id: 'TR', name: 'Turquía', tier: 2 },
   { id: 'CA', name: 'Canadá', tier: 2 },
+  { id: 'KR', name: 'Corea del Sur', tier: 2 },
+  { id: 'CI', name: 'Costa de Marfil', tier: 2 },
+  { id: 'SE', name: 'Suecia', tier: 2 },
 
-  // Tier 3 - Next 13 ranked teams
-  { id: 'GB-WLS', name: 'Gales', tier: 3 },
-  { id: 'RS', name: 'Serbia', tier: 3 },
-  { id: 'AT', name: 'Austria', tier: 3 },
-  { id: 'UA', name: 'Ucrania', tier: 3 },
-  { id: 'SE', name: 'Suecia', tier: 3 },
-  { id: 'TN', name: 'Túnez', tier: 3 },
-  { id: 'CL', name: 'Chile', tier: 3 },
-  { id: 'PE', name: 'Perú', tier: 3 },
-  { id: 'CR', name: 'Costa Rica', tier: 3 },
+  // Tier 3 - Next 13 ranked teams (Sorpresas)
+  { id: 'IR', name: 'Irán', tier: 3 },
+  { id: 'AU', name: 'Australia', tier: 3 },
   { id: 'EG', name: 'Egipto', tier: 3 },
-  { id: 'NG', name: 'Nigeria', tier: 3 },
-  { id: 'CM', name: 'Camerún', tier: 3 },
+  { id: 'TN', name: 'Túnez', tier: 3 },
+  { id: 'GB-SCT', name: 'Escocia', tier: 3 },
+  { id: 'CZ', name: 'República Checa', tier: 3 },
+  { id: 'PY', name: 'Paraguay', tier: 3 },
   { id: 'SA', name: 'Arabia Saudita', tier: 3 },
+  { id: 'PA', name: 'Panamá', tier: 3 },
+  { id: 'DZ', name: 'Argelia', tier: 3 },
+  { id: 'GH', name: 'Ghana', tier: 3 },
+  { id: 'BA', name: 'Bosnia y Herzegovina', tier: 3 },
+  { id: 'ZA', name: 'Sudáfrica', tier: 3 },
 
-  // Tier 4 - Last 9 teams (not used in pool)
-  { id: 'IQ', name: 'Irak', tier: 4 },
-  { id: 'JM', name: 'Jamaica', tier: 4 },
+  // Tier 4 - Last 9 teams (in the World Cup, NOT used in the pool)
   { id: 'QA', name: 'Catar', tier: 4 },
-  { id: 'PA', name: 'Panamá', tier: 4 },
-  { id: 'HN', name: 'Honduras', tier: 4 },
-  { id: 'DZ', name: 'Argelia', tier: 4 },
-  { id: 'GH', name: 'Ghana', tier: 4 },
   { id: 'NZ', name: 'Nueva Zelanda', tier: 4 },
-  { id: 'PY', name: 'Paraguay', tier: 4 },
+  { id: 'JM', name: 'Jamaica', tier: 4 },
+  { id: 'IQ', name: 'Irak', tier: 4 },
+  { id: 'CV', name: 'Cabo Verde', tier: 4 },
+  { id: 'CW', name: 'Curazao', tier: 4 },
+  { id: 'UZ', name: 'Uzbekistán', tier: 4 },
+  { id: 'JO', name: 'Jordania', tier: 4 },
+  { id: 'HT', name: 'Haití', tier: 4 },
 ];
 
 // Helper function to get team by ID
