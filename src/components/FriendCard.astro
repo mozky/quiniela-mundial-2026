@@ -1,0 +1,33 @@
+---
+import TeamBadge from './TeamBadge.astro';
+import type { Assignment } from '../data/assignments';
+
+interface Props {
+  assignment: Assignment;
+}
+
+const { assignment } = Astro.props;
+---
+
+<article class="bg-white rounded-lg shadow-lg p-6 border-2 border-gray-200 hover:border-blue-400 transition-colors">
+  <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center border-b-2 border-gray-200 pb-3">
+    {assignment.friend}
+  </h2>
+
+  <div class="space-y-4">
+    <div>
+      <p class="text-sm font-semibold text-blue-600 mb-2">Tier 1 (Favorito)</p>
+      <TeamBadge teamId={assignment.tier1Team} />
+    </div>
+
+    <div>
+      <p class="text-sm font-semibold text-green-600 mb-2">Tier 2 (Caballo Negro)</p>
+      <TeamBadge teamId={assignment.tier2Team} />
+    </div>
+
+    <div>
+      <p class="text-sm font-semibold text-orange-600 mb-2">Tier 3 (Sorpresa)</p>
+      <TeamBadge teamId={assignment.tier3Team} />
+    </div>
+  </div>
+</article>

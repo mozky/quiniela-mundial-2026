@@ -1,0 +1,29 @@
+{
+  "name": "quiniela-mundial-2026",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate-types": "wrangler types",
+    "generate-assignments": "tsx scripts/generate-assignments.ts"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^13.6.1",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.4.4",
+    "tailwindcss": "^4.3.0",
+    "wrangler": "^4.98.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  },
+  "overrides": {
+    "vite": "^7"
+  }
+}

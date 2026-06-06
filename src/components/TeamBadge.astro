@@ -1,0 +1,22 @@
+---
+import { getTeamById } from '../data/teams';
+import { getCountryFlag } from '../utils/flags';
+
+interface Props {
+  teamId: string;
+}
+
+const { teamId } = Astro.props;
+const team = getTeamById(teamId);
+
+if (!team) {
+  throw new Error(`Team not found: ${teamId}`);
+}
+
+const flag = getCountryFlag(team.id);
+---
+
+<div class="flex items-center gap-2 text-gray-800">
+  <span class="text-2xl" aria-label={`${team.name} flag`}>{flag}</span>
+  <span class="font-medium">{team.name}</span>
+</div>

@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import TeamBadge from '../components/TeamBadge.astro';
+import { getTeamsByTier } from '../data/teams';
+import { friends } from '../data/friends';
+
+const tier1Teams = getTeamsByTier(1);
+const tier2Teams = getTeamsByTier(2);
+const tier3Teams = getTeamsByTier(3);
+const tier4Teams = getTeamsByTier(4);
+---
+
+<Layout>
+  <main class="container mx-auto px-4 pb-16">
+    <Header />
+
+    <div class="max-w-6xl mx-auto space-y-12">
+      <!-- Tier 1: Favoritos -->
+      <section class="bg-white rounded-lg shadow-lg p-8 border-2 border-blue-400">
+        <h2 class="text-3xl font-bold text-blue-600 mb-6 text-center">
+          🏆 Tier 1: Favoritos
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {tier1Teams.map((team) => (
+            <div class="p-3 bg-blue-50 rounded-lg">
+              <TeamBadge teamId={team.id} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Tier 2: Caballos Negros -->
+      <section class="bg-white rounded-lg shadow-lg p-8 border-2 border-green-400">
+        <h2 class="text-3xl font-bold text-green-600 mb-6 text-center">
+          🐴 Tier 2: Caballos Negros
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {tier2Teams.map((team) => (
+            <div class="p-3 bg-green-50 rounded-lg">
+              <TeamBadge teamId={team.id} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Tier 3: Sorpresas -->
+      <section class="bg-white rounded-lg shadow-lg p-8 border-2 border-orange-400">
+        <h2 class="text-3xl font-bold text-orange-600 mb-6 text-center">
+          🎲 Tier 3: Sorpresas
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {tier3Teams.map((team) => (
+            <div class="p-3 bg-orange-50 rounded-lg">
+              <TeamBadge teamId={team.id} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Lista de Participantes -->
+      <section class="bg-white rounded-lg shadow-lg p-8 border-2 border-gray-300">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+          Participantes
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {friends.map((friend) => (
+            <div class="p-3 bg-gray-50 rounded-lg text-center">
+              <span class="font-semibold text-gray-800">{friend}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-center text-gray-600 mt-6 italic">
+          Cada participante será asignado aleatoriamente 1 equipo de cada tier
+        </p>
+      </section>
+
+      <!-- Tier 4: No participan en la quiniela -->
+      <section class="bg-gray-100 rounded-lg shadow p-8 border-2 border-gray-300 opacity-60">
+        <h2 class="text-2xl font-bold text-gray-500 mb-6 text-center">
+          Tier 4: No participan en la quiniela
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {tier4Teams.map((team) => (
+            <div class="p-3 bg-gray-200 rounded-lg opacity-75">
+              <TeamBadge teamId={team.id} />
+            </div>
+          ))}
+        </div>
+        <p class="text-center text-gray-500 mt-6 text-sm italic">
+          Estos 9 equipos no están incluidos en la quiniela
+        </p>
+      </section>
+    </div>
+
+    <footer class="text-center mt-12 text-gray-600">
+      <p class="text-sm">Copa Mundial 2026 • USA • Canadá • México</p>
+    </footer>
+  </main>
+</Layout>
