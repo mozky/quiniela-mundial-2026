@@ -11,23 +11,6 @@ A simple, static website displaying team assignments for a World Cup 2026 pool a
   - 1 from Tier 3 (next 13 ranked teams) - Underdog
 - **Winner takes all** - whoever has the World Cup winner wins the pool!
 
-## Current Assignments
-
-| Friend | Tier 1 (Favorite) | Tier 2 (Dark Horse) | Tier 3 (Underdog) |
-|--------|------------------|---------------------|-------------------|
-| Ali DT | England | Poland | Serbia |
-| Ali MG | Netherlands | USA | Costa Rica |
-| Bernie | Spain | Mexico | Tunisia |
-| Bryan | France | Japan | Chile |
-| Chino | Uruguay | Ecuador | Egypt |
-| Diego | Brazil | Canada | Cameroon |
-| Genaro | Portugal | Denmark | Wales |
-| Ivan | Italy | Morocco | Austria |
-| Roman | Croatia | Senegal | Peru |
-| Luis | Argentina | South Korea | Ukraine |
-| Ramiro | Germany | Switzerland | Sweden |
-| Toño | Belgium | Iran | Nigeria |
-| Moz | Colombia | Australia | Saudi Arabia |
 
 ## Tech Stack
 
@@ -62,31 +45,6 @@ npm run generate-assignments
 
 This will create new random assignments and overwrite `src/data/assignments.ts`. Review the changes with `git diff` before committing.
 
-## Deployment to Cloudflare Pages
-
-### Option 1: GitHub Integration (Recommended)
-
-1. Push this repository to GitHub
-2. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com)
-3. Go to **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**
-4. Select your repository
-5. Configure build settings:
-   - **Build command**: `npm run build`
-   - **Build output directory**: `dist`
-6. Click **Save and Deploy**
-
-### Option 2: Direct Upload with Wrangler
-
-```bash
-# Install wrangler globally (if not already installed)
-npm install -g wrangler
-
-# Build the project
-npm run build
-
-# Deploy to Cloudflare Pages
-npx wrangler pages deploy dist --project-name=quiniela-mundial-2026
-```
 
 ## Project Structure
 
