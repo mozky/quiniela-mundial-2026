@@ -7,7 +7,8 @@ export function getCountryFlag(countryCode: string): string {
   // Special handling for England and Wales
   const flagMap: Record<string, string> = {
     'GB-ENG': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', // England flag
-    'GB-WLS': '🏴󠁧󠁢󠁷󠁬󠁳󠁿', // Wales flag
+    'GB-SCT': '🏴󠁧󠁢󠁳󠁣󠁴󠁿', // Wales flag
+    'DRC': '🇨🇩', // Congo flag
   };
 
   // Check if it's a special case

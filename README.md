@@ -45,6 +45,35 @@ npm run generate-assignments
 
 This will create new random assignments and overwrite `src/data/assignments.ts`. Review the changes with `git diff` before committing.
 
+## Deployment to Cloudflare Pages
+
+### Option 1: GitHub Integration (Recommended)
+
+1. Push this repository to GitHub
+2. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com)
+3. Go to **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**
+4. Select your repository
+5. Configure build settings:
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+6. Click **Save and Deploy**
+
+### Option 2: Direct Upload with Wrangler
+
+```bash
+# Build and deploy in one step (uses the local wrangler dependency)
+npm run deploy
+```
+
+Or run the steps manually:
+
+```bash
+# Build the project (outputs static files to ./dist)
+npm run build
+
+# Deploy to Cloudflare Pages
+npx wrangler pages deploy dist --project-name=quiniela-xvs-mundial-2026
+```
 
 ## Project Structure
 
